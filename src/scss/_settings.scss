@@ -1,0 +1,26 @@
+//colors
+$white: #fff;
+$black: #333;
+$light-grey: #EDEEEE;
+$medium-grey: #D8D8D8;
+$primary-color: #192D40;
+$secondary-color: #2abdcd;
+$tertiary-color: #D1F1F3;
+
+//named colors
+$background-color: $white;
+$border-color: darken($light-grey, 20%);
+$link-color: $primary-color;
+$font-color: $primary-color;
+
+//fonts
+$primary-font-family: 'Roboto', sans-serif;
+
+//layout
+$max-width: 64rem; //1024px
+
+//break points
+$bp-larger-than-mobile: "min-width: 480px" !default;
+$bp-larger-than-tablet: "min-width: 736px" !default;
+$bp-larger-than-desktop: "min-width: 1280px" !default;
+$bp-larger-than-desktophd: "min-width: 1690px" !default;

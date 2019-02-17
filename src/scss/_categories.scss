@@ -1,0 +1,42 @@
+.category-previews{
+  @include unstyled-list;
+}
+
+.category-preview{
+  display: flex;
+  margin-bottom: 2rem;
+  padding: 2rem 0;
+  border-bottom: 1px solid $border-color;
+
+  &:last-child{
+    padding-bottom: 0;
+    margin-bottom: 0;
+    border-bottom: 0;
+  }
+
+  .category-image{
+    width: 30%;
+    padding-left: 2rem;
+
+    img{
+      max-width: 100%;
+      height: auto;
+    }
+  }
+
+  .category-text{
+    width: 50%;
+    padding-left: 2rem;
+
+    h3{
+      margin-top: 0;
+      font-size: 1.5rem;
+    }
+  }
+
+  .category-cta{
+    width: 20%;
+    margin-top: 2rem;
+    text-align: center;
+  }
+}

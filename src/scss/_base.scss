@@ -1,0 +1,55 @@
+*, *:before, *:after{
+  box-sizing: border-box;
+}
+
+html{
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  position: relative;
+  margin: 0 auto;
+  padding: 0;
+  background: $primary-color url('../img/logo-pattern.png');
+  font: 400 16px/1.6 $primary-font-family;
+  color: $primary-color;
+}
+
+h1, h2, h3, h4, h5, h6{
+  margin-bottom: .5rem;
+  line-height: 1.2;
+}
+
+h1{
+  font-weight: 700;
+}
+
+h3, h4, h5, h6{
+  font-weight: 500;
+}
+
+h2{
+  text-transform: uppercase;
+  letter-spacing: .25px;
+}
+
+p{
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+}
+
+a{
+  color: $link-color;
+  text-decoration: none;
+  cursor: pointer;
+  transition: opacity .2s ease;
+
+  &:hover{
+    opacity: .7;
+  }
+}
+
+main{
+  background-color: $white;
+}

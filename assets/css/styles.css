@@ -1,0 +1,314 @@
+*, *:before, *:after {
+  box-sizing: border-box; }
+
+html {
+  margin: 0;
+  padding: 0; }
+
+body {
+  position: relative;
+  margin: 0 auto;
+  padding: 0;
+  background: #192D40 url("../img/logo-pattern.png");
+  font: 400 16px/1.6 "Roboto", sans-serif;
+  color: #192D40; }
+
+h1, h2, h3, h4, h5, h6 {
+  margin-bottom: .5rem;
+  line-height: 1.2; }
+
+h1 {
+  font-weight: 700; }
+
+h3, h4, h5, h6 {
+  font-weight: 500; }
+
+h2 {
+  text-transform: uppercase;
+  letter-spacing: .25px; }
+
+p {
+  margin-top: 0;
+  margin-bottom: 1.5rem; }
+
+a {
+  color: #192D40;
+  text-decoration: none;
+  cursor: pointer;
+  transition: opacity .2s ease; }
+  a:hover {
+    opacity: .7; }
+
+main {
+  background-color: #fff; }
+
+.container {
+  position: relative;
+  max-width: 64rem;
+  margin: 0 auto;
+  padding: 2rem;
+  z-index: 500; }
+  @media screen and (min-width: 1280px) {
+    .container {
+      padding: 4rem 2rem; } }
+  @media screen and (min-width: 736px) {
+    .container.flex-container {
+      display: flex;
+      flex-wrap: wrap; } }
+
+.site-content {
+  padding-bottom: 4rem; }
+
+.button {
+  display: inline-block;
+  padding: .675rem 1.25rem;
+  border: 0;
+  text-decoration: none;
+  letter-spacing: 2px;
+  font-family: "Roboto", sans-serif;
+  font-size: .75rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  transition: opacity .2s ease; }
+  .button.more {
+    display: block;
+    width: 60%;
+    max-width: 20rem;
+    padding: 1rem 2rem;
+    margin: 2rem auto;
+    background: #192D40;
+    text-align: center;
+    color: #fff; }
+    @media screen and (min-width: 736px) {
+      .button.more {
+        width: 30%; } }
+  .button:hover {
+    opacity: .7; }
+  .button.border {
+    background: transparent;
+    border: 2px solid #192D40;
+    color: #192D40; }
+  .button.solid {
+    border: 2px solid #192D40;
+    background: #192D40;
+    color: #fff; }
+  .button.disabled {
+    background: transparent !important; }
+
+/*utility classes*/
+.hidden {
+  position: absolute !important;
+  clip: rect(1px, 1px, 1px, 1px); }
+
+.site-header {
+  background-color: #fff; }
+  .site-header .container {
+    max-width: 128rem;
+    padding: 2rem; }
+
+.homepage .site-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: transparent; }
+
+.contact-info {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 1rem;
+  right: 2rem; }
+  .contact-info li {
+    display: inline-block; }
+    .contact-info li a {
+      font-size: .8215rem;
+      letter-spacing: .5px; }
+    .contact-info li:first-child:after {
+      content: " | "; }
+
+.brand {
+  display: inline-block; }
+  .brand svg {
+    width: 10rem;
+    height: auto; }
+  .brand .cls-1 {
+    fill: #2abdcd; }
+  .brand.reversed .cls-1 {
+    fill: #fff; }
+
+.nav {
+  display: inline-block;
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+  .nav li {
+    display: inline-block;
+    margin-left: 2rem; }
+    .nav li a {
+      text-transform: uppercase;
+      letter-spacing: .5px; }
+
+.site-nav {
+  position: relative;
+  top: -1.5rem;
+  display: inline-block; }
+
+.secondary-nav {
+  position: absolute;
+  top: 3.5rem;
+  right: 2rem;
+  display: inline-block; }
+  .secondary-nav a svg {
+    width: 1.5rem;
+    height: auto; }
+
+.footer-nav .nav {
+  columns: 2; }
+
+.footer-nav li {
+  display: block;
+  margin-bottom: 1rem; }
+
+.site-footer {
+  color: #fff; }
+  .site-footer a {
+    color: #fff; }
+
+.business-meta {
+  width: 50%; }
+  .business-meta .email {
+    display: block;
+    margin: 1rem 0; }
+
+.site-meta {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  margin-top: 2rem;
+  text-align: center; }
+  .site-meta li {
+    display: inline-block;
+    margin: 1rem;
+    font-size: .875rem; }
+  .site-meta a {
+    text-decoration: underline; }
+
+.footer-nav {
+  width: 50%;
+  margin-top: 2rem; }
+
+.hero-section {
+  padding-top: 10rem;
+  padding-bottom: 4rem;
+  background: url(../img/background.jpg) no-repeat bottom center;
+  background-size: cover; }
+
+.hero-text {
+  max-width: 60%;
+  margin: auto;
+  text-align: center; }
+  .hero-text p {
+    font-size: 3.5rem;
+    font-weight: 500;
+    line-height: 1.2; }
+  .hero-text .button {
+    padding: 1rem 1.5rem; }
+
+.homepage-section h2 {
+  font-weight: 500; }
+
+.homepage-section p {
+  font-size: 1.125rem; }
+
+.catalog-section {
+  background-color: #D1F1F3;
+  overflow: hidden; }
+  .catalog-section .container {
+    display: flex;
+    padding-bottom: 0; }
+
+.catalog-image {
+  margin-bottom: -.5rem;
+  margin-top: 0; }
+  .catalog-image img {
+    max-width: 100%;
+    height: auto; }
+
+.catalog-text {
+  max-width: 40%;
+  margin-top: -1rem; }
+
+.user-content {
+  clear: both;
+  margin-bottom: 2rem; }
+  .user-content:last-child {
+    margin-bottom: 0; }
+  @media screen and (min-width: 736px) {
+    .user-content p, .user-content ul, .user-content ol, .user-content blockquote {
+      max-width: 60%; } }
+  .user-content a {
+    text-decoration: underline; }
+    .user-content a.button {
+      text-decoration: none; }
+  .user-content h2 {
+    font-size: 1.5rem; }
+  .user-content ul {
+    list-style: square;
+    margin-left: 1rem;
+    margin-bottom: 1.5rem;
+    padding: 0; }
+    .user-content ul li {
+      margin-bottom: .5rem; }
+  .user-content blockquote {
+    clear: both;
+    margin: 2rem 0;
+    font-size: 1.5rem;
+    color: #192D40;
+    line-height: 1.4; }
+  .user-content figure {
+    margin: 2rem 0; }
+    @media screen and (min-width: 1280px) {
+      .user-content figure {
+        float: right;
+        margin: 2rem 0 2rem 2rem; } }
+    .user-content figure img {
+      max-width: 100%;
+      height: auto; }
+    .user-content figure figcaption {
+      margin: .25rem 0;
+      font-size: .875rem;
+      font-style: italic; }
+
+.category-previews {
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+
+.category-preview {
+  display: flex;
+  margin-bottom: 2rem;
+  padding: 2rem 0;
+  border-bottom: 1px solid #b9bcbc; }
+  .category-preview:last-child {
+    padding-bottom: 0;
+    margin-bottom: 0;
+    border-bottom: 0; }
+  .category-preview .category-image {
+    width: 30%;
+    padding-left: 2rem; }
+    .category-preview .category-image img {
+      max-width: 100%;
+      height: auto; }
+  .category-preview .category-text {
+    width: 50%;
+    padding-left: 2rem; }
+    .category-preview .category-text h3 {
+      margin-top: 0;
+      font-size: 1.5rem; }
+  .category-preview .category-cta {
+    width: 20%;
+    margin-top: 2rem;
+    text-align: center; }

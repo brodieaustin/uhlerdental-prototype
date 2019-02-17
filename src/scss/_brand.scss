@@ -1,0 +1,18 @@
+.brand{
+  display: inline-block;
+
+  svg{
+    width: 10rem;
+    height: auto;
+  }
+
+  .cls-1{
+    fill: $secondary-color;
+  }
+
+  &.reversed{
+    .cls-1{
+      fill: $white;
+    }
+  }
+}

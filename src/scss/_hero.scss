@@ -1,0 +1,22 @@
+.hero-section{
+  padding-top: 10rem;
+  padding-bottom: 4rem;
+  background: url(../img/background.jpg) no-repeat bottom center;
+  background-size: cover;
+}
+
+.hero-text{
+  max-width: 60%;
+  margin: auto;
+  text-align: center;
+
+  p{
+    font-size: 3.5rem;
+    font-weight: 500;
+    line-height: 1.2;
+  }
+
+  .button{
+    padding: 1rem 1.5rem;
+  }
+}

@@ -1,0 +1,47 @@
+
+
+.nav{
+  display: inline-block;
+  @include unstyled-list;
+
+  li{
+    display: inline-block;
+    margin-left: 2rem;
+
+    a{
+      text-transform: uppercase;
+      letter-spacing: .5px;
+    }
+  }
+}
+
+.site-nav{
+  position: relative;
+  top: -1.5rem;
+  display: inline-block;
+}
+
+.secondary-nav{
+  position: absolute;
+  top: 3.5rem;
+  right: 2rem;
+  display: inline-block;
+
+  a{
+    svg{
+      width: 1.5rem;
+      height: auto;
+    }
+  }
+}
+
+.footer-nav{
+  .nav{
+    columns: 2;
+  }
+
+  li{
+    display: block;
+    margin-bottom: 1rem;
+  }
+}

@@ -1,0 +1,3 @@
+title: "Uhler Dental Supply, Inc."
+baseurl: "/uhlerdental-prototype"
+exclude: ['node_modules/', 'gulpfile.js', 'package.json', 'src/']

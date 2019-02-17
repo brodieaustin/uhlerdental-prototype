@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>{% if page.title != 'Homepage' %}{{ page.title }} | {% endif %}{{ site.title }}</title>
+  <meta name="viewport" content="width=device-width">
+  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,500,700" rel="stylesheet">
+  <link href="{{ site.baseurl }}/assets/css/styles.css" rel="stylesheet">
+</head>
+<body{% if page.body_class %} class="{{ page.body_class }}"{% endif %}>
+  <!--header-->
+  {% include header.html %}
+
+  <!--content-->
+  <main class="site-content" role="main">
+    {{ content }}
+  </main>
+
+  <!--footer-->
+  {% include footer.html %}
+
+  <!--scripts-->
+<script>
+  (function(){
+    var menu = document.getElementById('site-nav');
+    var menu_control = document.getElementById('site-nav-control');
+
+    //check if menu_control is visible or not and set aria attribute
+    var menu_init = function(){
+      if (menu_control.offsetParent == null){
+        menu.setAttribute('aria-hidden', 'false');
+      }
+      else{
+        menu.setAttribute('aria-hidden', 'true');
+      }
+    }
+
+    //when window is resized clean up mobile nav
+    var menu_window_resize = function(){
+      if (menu_control.offsetParent == null){
+        menu.setAttribute('aria-hidden', 'false');
+        menu.classList.remove('open', 'closed');
+        menu_control.classList.add('open-site-nav');
+        menu_control.classList.remove('close-site-nav');
+      }
+      else{
+        menu.setAttribute('aria-hidden', 'true');
+      }
+    }
+
+    //handling when the menu is open and closed
+    var toggle_menu = function(){
+      menu.classList.toggle('open');
+
+      if (menu.classList.contains('open')){
+        menu.classList.remove('closed');
+      }
+      else{
+        menu.classList.add('closed');
+      }
+
+      if (menu.getAttribute('aria-hidden') == 'false'){
+        menu.setAttribute('aria-hidden', 'true');
+      }
+      else{
+        menu.setAttribute('aria-hidden', 'false');
+      }
+
+      menu_control.classList.toggle('open-site-nav');
+      menu_control.classList.toggle('close-site-nav');
+
+      if (menu_control.getAttribute('aria-expanded') == 'false'){
+        menu_control.setAttribute('aria-expanded', 'true');
+      }
+      else{
+        menu_control.setAttribute('aria-expanded', 'true');
+      }
+    }
+
+    //initialization
+    menu_init();
+
+    //resize
+    window.addEventListener('resize', menu_window_resize, false);
+
+    //click
+    menu_control.onclick = function(event){
+      toggle_menu();
+    }
+  })();
+</script>
+
+</body>
+</html>

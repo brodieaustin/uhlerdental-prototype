@@ -1,0 +1,34 @@
+.homepage-section{
+  h2{
+    font-weight: 500;
+  }
+
+  p{
+    font-size: 1.125rem;
+  }
+}
+
+.catalog-section{
+  background-color: $tertiary-color;
+  overflow: hidden;
+
+  .container{
+    display: flex;
+    padding-bottom: 0;
+  }
+}
+
+.catalog-image{
+  margin-bottom: -.5rem;
+  margin-top: 0;
+
+  img{
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+.catalog-text{
+  max-width: 40%;
+  margin-top: -1rem;
+}

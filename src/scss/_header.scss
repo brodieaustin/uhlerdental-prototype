@@ -1,0 +1,38 @@
+.site-header{
+  background-color: $white;
+
+  .container{
+    max-width: 128rem;
+    padding: 2rem;
+  }
+}
+
+.homepage{
+  .site-header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: transparent;
+  }
+}
+
+.contact-info{
+  @include unstyled-list;
+  position: absolute;
+  top: 1rem;
+  right: 2rem;
+
+  li{
+    display: inline-block;
+
+    a{
+      font-size: .8215rem;
+      letter-spacing: .5px;
+    }
+
+    &:first-child:after{
+      content: " | "
+    }
+  }
+}

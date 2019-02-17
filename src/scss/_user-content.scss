@@ -1,0 +1,66 @@
+.user-content{
+  clear: both;
+  margin-bottom: 2rem;
+
+  &:last-child{
+    margin-bottom: 0;
+  }
+
+
+  @media screen and (#{$bp-larger-than-tablet}){
+    p, ul, ol, blockquote{
+      max-width: 60%;
+    }
+  }
+
+  a{
+    text-decoration: underline;
+
+    &.button{
+      text-decoration: none;
+    }
+  }
+
+  h2{
+    font-size: 1.5rem;
+  }
+
+  ul{
+    list-style: square;
+    margin-left: 1rem;
+    margin-bottom: 1.5rem;
+    padding: 0;
+
+    li{
+      margin-bottom: .5rem;
+    }
+  }
+
+  blockquote{
+    clear: both;
+    margin: 2rem 0;
+    font-size: 1.5rem;
+    color: $primary-color;
+    line-height: 1.4;
+  }
+
+  figure{
+    margin: 2rem 0;
+
+    @media screen and (#{$bp-larger-than-desktop}){
+      float: right;
+      margin: 2rem 0 2rem 2rem;
+    }
+
+    img{
+      max-width: 100%;
+      height: auto;
+    }
+
+    figcaption{
+      margin: .25rem 0;
+      font-size: .875rem;
+      font-style: italic;
+    }
+  }
+}
