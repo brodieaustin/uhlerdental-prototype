@@ -44,4 +44,8 @@
   &.disabled{
     background: transparent !important;
   }
+
+  &.small{
+    padding: .5rem 1.25rem;
+  }
 }

@@ -5,10 +5,6 @@
   padding: 2rem;
   z-index: 500;
 
-  @media screen and (#{$bp-larger-than-desktop}){
-    padding: 4rem 2rem;
-  }
-
   &.flex-container{
     @media screen and (#{$bp-larger-than-tablet}){
       display: flex;
@@ -18,5 +14,5 @@
 }
 
 .site-content{
-  padding-bottom: 4rem;
+  margin-bottom: 2rem;
 }
