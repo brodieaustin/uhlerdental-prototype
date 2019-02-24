@@ -32,7 +32,7 @@ p {
   margin-bottom: 1.5rem; }
 
 a {
-  color: #192D40;
+  color: #2abdcd;
   text-decoration: none;
   cursor: pointer;
   transition: opacity .2s ease; }
@@ -40,7 +40,8 @@ a {
     opacity: .7; }
 
 main {
-  background-color: #fff; }
+  background-color: #fff;
+  padding-bottom: 4rem; }
 
 .container {
   position: relative;
@@ -66,6 +67,7 @@ main {
   font-size: .75rem;
   font-weight: 500;
   text-transform: uppercase;
+  cursor: pointer;
   transition: opacity .2s ease; }
   .button.more {
     display: block;
@@ -99,6 +101,37 @@ main {
   position: absolute !important;
   clip: rect(1px, 1px, 1px, 1px); }
 
+.action-link {
+  display: inline-block;
+  font-size: .75rem;
+  letter-spacing: .5px;
+  font-weight: 500;
+  text-decoration: underline;
+  text-transform: uppercase;
+  color: #192D40; }
+
+input, select {
+  font-family: inherit;
+  font-size: 1rem; }
+
+.form-control {
+  margin-bottom: 1.5rem; }
+  .form-control label {
+    display: block;
+    margin-bottom: .5rem;
+    font-size: .75rem;
+    text-transform: uppercase;
+    letter-spacing: .5px; }
+  .form-control input[type=text], .form-control input[type=email], .form-control input[type=password], .form-control textarea {
+    width: 100%;
+    padding: 1rem .5rem; }
+  .form-control p {
+    font-size: .875rem;
+    margin-top: .5rem; }
+
+.button-controls {
+  text-align: right; }
+
 .site-header {
   background-color: #fff; }
   .site-header .container {
@@ -123,7 +156,8 @@ main {
     display: inline-block; }
     .contact-info li a {
       font-size: .8215rem;
-      letter-spacing: .5px; }
+      letter-spacing: .5px;
+      color: #192D40; }
     .contact-info li:first-child:after {
       content: " | "; }
 
@@ -147,7 +181,8 @@ main {
     margin-left: 2rem; }
     .nav li a {
       text-transform: uppercase;
-      letter-spacing: .5px; }
+      letter-spacing: .5px;
+      color: #192D40; }
 
 .site-nav {
   position: relative;
@@ -169,6 +204,8 @@ main {
 .footer-nav li {
   display: block;
   margin-bottom: 1rem; }
+  .footer-nav li a {
+    color: #fff; }
 
 .site-footer {
   color: #fff; }
@@ -244,11 +281,15 @@ main {
   margin-top: -1rem; }
 
 .page-header .container {
-  padding-bottom: 2rem; }
+  padding-bottom: 1rem; }
 
 .page-header h1 {
   margin-top: 0;
   font-size: 3rem; }
+  .page-header h1 small {
+    display: inline-block;
+    margin-left: 1rem;
+    color: #2abdcd; }
 
 .user-content {
   clear: both;
@@ -264,6 +305,8 @@ main {
       text-decoration: none; }
   .user-content h2 {
     font-size: 1.5rem; }
+    .user-content h2:first-child {
+      margin-top: 0; }
   .user-content ul {
     list-style: square;
     margin-left: 1rem;
@@ -275,7 +318,7 @@ main {
     clear: both;
     margin: 2rem 0;
     font-size: 1.5rem;
-    color: #192D40;
+    color: #2196a3;
     line-height: 1.4; }
   .user-content figure {
     margin: 2rem 0; }
@@ -324,6 +367,7 @@ main {
 
 .collection-filters {
   position: relative;
+  margin-top: 2rem;
   background-color: #D1F1F3; }
   .collection-filters .container {
     padding-top: 0;
@@ -349,7 +393,8 @@ main {
   .filter-options li {
     margin-bottom: .5rem; }
   .filter-options a {
-    font-size: .875rem; }
+    font-size: .875rem;
+    color: #192D40; }
 
 .filters-toggle {
   position: absolute;
@@ -407,9 +452,14 @@ main {
 .product-information {
   width: 55%; }
   .product-information h3 {
-    font-size: 100%; }
+    font-size: 1.125rem; }
   .product-information .product-price {
+    margin-bottom: .25rem;
     font-size: .875rem; }
+  .product-information .product-description {
+    margin-bottom: .25rem; }
+  .product-information .button {
+    margin-top: 1.5rem; }
 
 .product-details {
   margin-bottom: 4rem; }
@@ -436,5 +486,202 @@ main {
   .related-products .product-preview {
     margin-bottom: 2rem;
     padding: 2rem 1rem;
-    background-color: #fff;
-    opacity: .8; }
+    background-color: #fff; }
+
+.account-page h2 {
+  margin-top: 0;
+  margin-bottom: 1rem; }
+
+.account-info {
+  width: calc(35% - 2rem);
+  margin-right: 2rem; }
+
+.account-orders {
+  width: 65%; }
+
+.account-address {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 1rem; }
+
+.account-form-section .container {
+  max-width: 40%; }
+
+.account-form-section h1 {
+  margin-top: 0;
+  font-size: 2.5rem; }
+
+.account-form {
+  margin: 1rem 0;
+  padding: 2rem;
+  background-color: #EDEEEE; }
+
+.order-previews {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: table;
+  width: 100%; }
+
+.order-preview {
+  display: table-row; }
+  .order-preview div {
+    display: table-cell;
+    padding: 1rem .5rem .5rem;
+    border-bottom: 1px solid #EDEEEE; }
+
+.order-preview-headings {
+  text-transform: uppercase;
+  font-size: .75rem; }
+  .order-preview-headings div {
+    padding-top: 0; }
+
+.order-meta-section {
+  background-color: #D1F1F3; }
+
+.billing-info {
+  width: 50%; }
+
+.fulfillment-info {
+  width: 50%; }
+
+.status-label {
+  padding: .5rem;
+  text-transform: uppercase;
+  background-color: #fff; }
+
+.order-details {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: table;
+  width: 100%; }
+
+.order-detail-headings {
+  text-transform: uppercase;
+  font-size: .75rem; }
+  .order-detail-headings span {
+    padding-top: 0; }
+
+.order-detail {
+  display: table-row; }
+  .order-detail div {
+    display: table-cell;
+    width: 15%;
+    padding: 1rem .5rem .5rem;
+    border-bottom: 1px solid #EDEEEE; }
+
+.order-detail-product {
+  width: 40% !important; }
+
+.order-detail-label {
+  column-span: 4;
+  text-align: right;
+  color: #9ea4a4; }
+
+.order-detail-order-total {
+  font-weight: 700; }
+
+.cart-items {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 1rem; }
+
+.cart-item {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 1rem 0;
+  border-bottom: 1px solid #EDEEEE; }
+  .cart-item:first-child {
+    border-top: 1px solid #EDEEEE; }
+  .cart-item .product-image {
+    width: calc(20% - 2rem); }
+  .cart-item .product-information {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 80%; }
+    .cart-item .product-information * {
+      padding: 1rem; }
+    .cart-item .product-information h3 {
+      width: 40%;
+      margin: 0; }
+    .cart-item .product-information input {
+      width: 10%;
+      padding: .5rem;
+      text-align: center; }
+    .cart-item .product-information .product-price {
+      width: 30%;
+      margin-top: 0;
+      margin-bottom: 0;
+      text-align: right;
+      font-size: 100%; }
+    .cart-item .product-information .remove-item {
+      width: 20%;
+      text-align: right; }
+
+.cart-total {
+  margin-bottom: 2rem;
+  padding: 1rem 20% 1rem 0;
+  border-bottom: 1px solid #EDEEEE;
+  text-align: right;
+  font-weight: 700; }
+
+.search-results-section .product-previews {
+  display: block; }
+
+.search-results-section .product-preview {
+  width: 100%;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid #EDEEEE; }
+
+.search-results-section .product-image {
+  width: calc(30% - 2rem); }
+
+.search-results-section .product-information {
+  width: 70%; }
+
+.user-content {
+  clear: both;
+  margin-bottom: 2rem; }
+  .user-content:last-child {
+    margin-bottom: 0; }
+  @media screen and (min-width: 736px) {
+    .user-content p, .user-content ul, .user-content ol, .user-content blockquote {
+      max-width: 60%; } }
+  .user-content a {
+    text-decoration: underline; }
+    .user-content a.button {
+      text-decoration: none; }
+  .user-content h2 {
+    font-size: 1.5rem; }
+    .user-content h2:first-child {
+      margin-top: 0; }
+  .user-content ul {
+    list-style: square;
+    margin-left: 1rem;
+    margin-bottom: 1.5rem;
+    padding: 0; }
+    .user-content ul li {
+      margin-bottom: .5rem; }
+  .user-content blockquote {
+    clear: both;
+    margin: 2rem 0;
+    font-size: 1.5rem;
+    color: #2196a3;
+    line-height: 1.4; }
+  .user-content figure {
+    margin: 2rem 0; }
+    @media screen and (min-width: 1280px) {
+      .user-content figure {
+        float: right;
+        margin: 2rem 0 2rem 2rem; } }
+    .user-content figure img {
+      max-width: 100%;
+      height: auto; }
+    .user-content figure figcaption {
+      margin: .25rem 0;
+      font-size: .875rem;
+      font-style: italic; }

@@ -49,6 +49,11 @@ function watchFiles() {
       "./index.html",
       "./collections/index.html",
       "./products/index.html",
+      "./customers/account/index.html",
+      "./customers/order/index.html",
+      "./customers/login/index.html",
+      "./cart/index.html",
+      "./search/index.html",
     ],
     gulp.series(jekyll, browserSyncReload)
   );

@@ -23,6 +23,10 @@
 
   h2{
     font-size: 1.5rem;
+
+    &:first-child{
+      margin-top: 0;
+    }
   }
 
   ul{
@@ -40,7 +44,7 @@
     clear: both;
     margin: 2rem 0;
     font-size: 1.5rem;
-    color: $primary-color;
+    color: darken($secondary-color, 10%);
     line-height: 1.4;
   }
 

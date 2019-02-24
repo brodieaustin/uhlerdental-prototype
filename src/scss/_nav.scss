@@ -11,6 +11,7 @@
     a{
       text-transform: uppercase;
       letter-spacing: .5px;
+      color: $primary-color;
     }
   }
 }
@@ -43,5 +44,9 @@
   li{
     display: block;
     margin-bottom: 1rem;
+    
+    a{
+      color: $white;
+    }
   }
 }

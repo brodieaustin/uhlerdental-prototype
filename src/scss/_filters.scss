@@ -1,5 +1,6 @@
 .collection-filters{
   position: relative;
+  margin-top: 2rem;
   background-color: $tertiary-color;
 
   .container{
@@ -37,6 +38,7 @@
 
   a{
     font-size: .875rem;
+    color: $primary-color;
   }
 }
 

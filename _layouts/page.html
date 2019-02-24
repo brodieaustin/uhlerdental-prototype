@@ -1,0 +1,15 @@
+---
+layout: base
+---
+
+<article class="page {{ page.page_class }}">
+  <header class="page-header">
+    <div class="container">
+      {% if page.collection %}
+        <span class="product-collection-label"><a href="">{{ page.collection }}</a></span>
+      {% endif %}
+        <h1>{{ page.title }}{% if page.subtitle %}<small>{{ page.subtitle }}</small>{% endif %}</h1>
+    </div>
+  </header>
+  {{ content }}
+</article>

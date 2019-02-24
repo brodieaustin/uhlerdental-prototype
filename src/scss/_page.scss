@@ -1,15 +1,20 @@
 .page{
-
 }
 
 .page-header{
 
   .container{
-    padding-bottom: 2rem;
+    padding-bottom: 1rem;
   }
 
   h1{
     margin-top: 0;
     font-size: 3rem;
+
+    small{
+      display: inline-block;
+      margin-left: 1rem;
+      color: $secondary-color;
+    }
   }
 }

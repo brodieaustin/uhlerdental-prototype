@@ -1,0 +1,65 @@
+---
+title: "Cart"
+layout: page
+page_class: "cart-page"
+---
+
+<section class="cart-section">
+  <div class="container">
+    <form class="cart">
+      <ul class="cart-items">
+        <li class="cart-item">
+          <figure class="product-image">
+            <img src="{{ site.baseurl }}/assets/img/products/denture-lab-products.jpg">
+          </figure>
+          <div class="product-information">
+            <h3>Denture Teeth</h3>
+            <input type="text" name="updates[]" size="4" id="updates_{{ item.id }}" value="2" />
+            <p class="product-price">$99.99</p>
+            <a href="/cart/change?line={{ forloop.index }}&quantity=0" class="remove-item">Remove</a>
+          </div>
+        </li>
+        <li class="cart-item">
+          <figure class="product-image">
+            <img src="{{ site.baseurl }}/assets/img/products/denture-lab-products.jpg">
+          </figure>
+          <div class="product-information">
+            <h3>Denture Teeth</h3>
+            <input type="text" name="updates[]" size="4" id="updates_{{ item.id }}" value="4" />
+            <p class="product-price">$99.99</p>
+            <a href="/cart/change?line={{ forloop.index }}&quantity=0" class="remove-item">Remove</a>
+          </div>
+        </li>
+        <li class="cart-item">
+          <figure class="product-image">
+            <img src="{{ site.baseurl }}/assets/img/products/denture-lab-products.jpg">
+          </figure>
+          <div class="product-information">
+            <h3>Denture Teeth</h3>
+            <input type="text" name="updates[]" size="4" id="updates_{{ item.id }}" value="4" />
+            <p class="product-price">$99.99</p>
+            <a href="/cart/change?line={{ forloop.index }}&quantity=0" class="remove-item">Remove</a>
+          </div>
+        </li>
+        <li class="cart-item">
+          <figure class="product-image">
+            <img src="{{ site.baseurl }}/assets/img/products/denture-lab-products.jpg">
+          </figure>
+          <div class="product-information">
+            <h3>Denture Teeth</h3>
+            <input type="text" name="updates[]" size="4" id="updates_{{ item.id }}" value="4" />
+            <p class="product-price">$99.99</p>
+            <a href="/cart/change?line={{ forloop.index }}&quantity=0" class="remove-item">Remove</a>
+          </div>
+        </li>
+      </ul>
+      <div class="cart-total">
+        Total: $4,000.00
+      </div>
+      <div class="button-controls">
+        <button class="button border" type="submit">Update</button>
+        <button class="button solid" type="submit" name="checkout">Checkout</button>
+      </div>
+    </form>
+  </div>
+</section>
