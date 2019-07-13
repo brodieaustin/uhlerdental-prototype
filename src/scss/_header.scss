@@ -14,26 +14,47 @@
     left: 0;
     width: 100%;
     background: transparent;
+    z-index: 1000;
   }
 }
 
 .contact-info{
   @include unstyled-list;
   position: absolute;
-  top: .5rem;
-  right: 2rem;
+  bottom: 3rem;
+  right: 0;
+  left: 0;
+  margin: auto;
+  text-align: center;
+
+
+  @media screen and (#{$bp-larger-than-desktop}){
+    top: .5rem;
+    right: 2rem;
+    text-align: right;
+  }
 
   li{
-    display: inline-block;
+
+    @media screen and (#{$bp-larger-than-desktop}){
+      display: inline-block;
+    }
 
     a{
-      font-size: .8215rem;
+      font-size: .9375rem;
       letter-spacing: .5px;
       color: $primary-color;
+
+      @media screen and (#{$bp-larger-than-desktop}){
+        font-size: .8215rem;
+      }
     }
 
     &:first-child:after{
-      content: " | "
+
+      @media screen and (#{$bp-larger-than-desktop}){
+        content: " | "
+      }
     }
   }
 }

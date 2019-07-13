@@ -3,9 +3,14 @@
   .container{
     padding: 4rem;
   }
-  
+
   h2{
     font-weight: 500;
+    text-align: center;
+
+    @media screen and (#{$bp-larger-than-tablet}){
+      text-align: left;
+    }
   }
 
   p{
@@ -18,8 +23,15 @@
   overflow: hidden;
 
   .container{
-    display: flex;
-    padding-bottom: 0;
+
+    @media screen and (#{$bp-larger-than-tablet}){
+      display: flex;
+      padding-bottom: 2rem;
+    }
+
+    @media screen and (#{$bp-larger-than-desktop}){
+      padding-bottom: 0;
+    }
   }
 }
 
@@ -34,6 +46,9 @@
 }
 
 .catalog-text{
-  max-width: 40%;
   margin-top: -1rem;
+
+  @media screen and (#{$bp-larger-than-tablet}){
+    max-width: 40%;
+  }
 }

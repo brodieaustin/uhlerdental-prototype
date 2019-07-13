@@ -5,6 +5,14 @@
   clip: rect(1px, 1px, 1px, 1px);
 }
 
+.display-on-mobile{
+  display: inherit;
+
+  @media screen and (#{$bp-larger-than-desktop}){
+    display: none !important;
+  }
+}
+
 @mixin unstyled-list(){
   list-style: none;
   margin: 0;

@@ -6,7 +6,11 @@
 
   li{
     display: inline-block;
-    margin-left: 2rem;
+    margin-left: 1rem;
+
+    @media screen and (#{$bp-larger-than-tablet}){
+      margin-left: 2rem;
+    }
 
     a{
       text-transform: uppercase;
@@ -16,10 +20,70 @@
   }
 }
 
+.site-nav-container{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 70%;
+  height: 100%;
+  padding: 8rem 4rem;
+  background-color: $tertiary-color;
+  transform: translateX(-100%);
+  z-index: 10000;
+
+  @media screen and (#{$bp-larger-than-tablet}){
+    width: 40%;
+  }
+
+  @media screen and (#{$bp-larger-than-desktop}){
+    position: static;
+    display: inline-block;
+    width: auto;
+    height: auto;
+    margin-top: .5rem;
+    padding: 0;
+    text-align: right;
+    background-color: transparent;
+    transform: none;
+  }
+
+  &.closed{
+    transform: translateX(-100%);
+    transition: transform .3s ease-in;
+  }
+
+  &.open{
+    transform: translateX(0);
+    transition: transform .3s ease-out;
+  }
+}
+
 .site-nav{
-  position: relative;
-  top: -2rem;
   display: inline-block;
+  text-align: center;
+
+  @media screen and (#{$bp-larger-than-desktop}){
+    position: relative;
+    top: -2rem;
+  }
+
+  li{
+    display: block;
+    margin-bottom: 2rem;
+
+    @media screen and (#{$bp-larger-than-desktop}){
+      display: inherit;
+      margin-bottom: 0;
+    }
+  }
+
+  a{
+    font-size: 1.25rem;
+
+    @media screen and (#{$bp-larger-than-desktop}){
+      font-size: 1rem;
+    }
+  }
 }
 
 .secondary-nav{
@@ -29,11 +93,44 @@
   display: inline-block;
 
   a{
+    cursor: pointer;
+
     svg{
       width: 1.5rem;
       height: auto;
     }
   }
+}
+
+
+.site-nav-control {
+  display: inline-block;
+  width: 2.25rem;
+  height: 2.25rem;
+  color: $font-color;
+  background-color: transparent;
+  border: 0;
+  font-family: $primary-font-family;
+  font-size: 1.5rem;
+  vertical-align: bottom;
+  cursor: pointer;
+  transition: opacity .1s linear;
+
+  @media screen and (#{$bp-larger-than-desktop}){
+    display: none;
+  }
+
+  &:hover{
+    opacity: .7;
+  }
+}
+
+.open-site-nav:before {
+  content: '\2630';
+}
+
+.close-site-nav:before {
+  content: '\00D7';
 }
 
 .footer-nav{
@@ -44,7 +141,12 @@
   li{
     display: block;
     margin-bottom: 1rem;
-    
+    margin-left: 0;
+
+    @media screen and (#{$bp-larger-than-tablet}){
+      margin-left: 1rem;
+    }
+
     a{
       color: $white;
     }

@@ -33,6 +33,9 @@
 }
 
 .footer-nav{
-  width: 50%;
   margin-top: 2rem;
+
+  @media screen and (#{$bp-larger-than-tablet}){
+    width: 50%;
+  }
 }

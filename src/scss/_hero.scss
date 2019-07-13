@@ -1,19 +1,27 @@
 .hero-section{
   padding-top: 10rem;
   padding-bottom: 4rem;
-  background: url(../img/background.jpg) no-repeat bottom center;
+  background-repeat: no-repeat;
+  background-position: bottom center;
   background-size: cover;
 }
 
 .hero-text{
-  max-width: 60%;
   margin: auto;
   text-align: center;
 
+  @media screen and (#{$bp-larger-than-tablet}){
+    max-width: 60%;
+  }
+
   p{
-    font-size: 3.5rem;
+    font-size: 2.5rem;
     font-weight: 500;
     line-height: 1.2;
+
+    @media screen and (#{$bp-larger-than-tablet}){
+      font-size: 3.5rem;
+    }
   }
 
   .button{

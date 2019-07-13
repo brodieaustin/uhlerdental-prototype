@@ -1,9 +1,14 @@
 .brand{
   display: inline-block;
+  margin-top: .5rem;
 
   svg{
-    width: 10rem;
+    width: 9rem;
     height: auto;
+
+    @media screen and (#{$bp-larger-than-tablet}){
+      width: 10rem;
+    }
   }
 
   .cls-1{
