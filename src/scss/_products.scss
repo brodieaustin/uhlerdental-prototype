@@ -1,12 +1,9 @@
 .product-previews{
   @include unstyled-list;
-
-  @media screen and (#{$bp-larger-than-tablet}){
-    display: flex;
-    flex-wrap: wrap;
-    margin-top: 2rem;
-    margin-left: -2rem;
-  }
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+  margin-left: -2rem;
 }
 
 .product-preview{
