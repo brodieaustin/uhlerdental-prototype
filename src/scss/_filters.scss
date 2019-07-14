@@ -30,7 +30,11 @@
 .filter-options{
   @include unstyled-list;
   padding-bottom: 2rem;
-  columns: 4;
+  columns: 2;
+
+  @media screen and (#{$bp-larger-than-tablet}){
+    columns: 4;
+  }
 
   li{
     margin-bottom: .5rem;

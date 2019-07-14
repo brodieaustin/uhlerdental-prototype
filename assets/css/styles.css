@@ -133,9 +133,26 @@ input, select {
   .form-control p {
     font-size: .875rem;
     margin-top: .5rem; }
+  .form-control.inline {
+    display: flex;
+    margin-bottom: 1.5rem; }
+    .form-control.inline label {
+      display: inline-block;
+      width: 3rem; }
+    .form-control.inline input {
+      width: 100%;
+      max-width: 4rem; }
 
 .button-controls {
   text-align: right; }
+
+.grouped-controls {
+  columns: 3;
+  margin-top: 1rem;
+  margin-bottom: 1rem; }
+  @media screen and (min-width: 1020px) {
+    .grouped-controls {
+      columns: 4; } }
 
 .site-header {
   background-color: #fff; }
@@ -217,7 +234,7 @@ input, select {
   width: 70%;
   height: 100%;
   padding: 8rem 4rem;
-  background-color: #D1F1F3;
+  background-color: #EDEEEE;
   transform: translateX(-100%);
   z-index: 10000; }
   @media screen and (min-width: 736px) {
@@ -225,11 +242,11 @@ input, select {
       width: 40%; } }
   @media screen and (min-width: 1020px) {
     .site-nav-container {
-      position: static;
+      position: relative;
       display: inline-block;
+      top: -2rem;
       width: auto;
       height: auto;
-      margin-top: .5rem;
       padding: 0;
       text-align: right;
       background-color: transparent;
@@ -244,10 +261,6 @@ input, select {
 .site-nav {
   display: inline-block;
   text-align: center; }
-  @media screen and (min-width: 1020px) {
-    .site-nav {
-      position: relative;
-      top: -2rem; } }
   .site-nav li {
     display: block;
     margin-bottom: 2rem; }
@@ -401,7 +414,10 @@ input, select {
 
 .page-header h1 {
   margin-top: 0;
-  font-size: 3rem; }
+  font-size: 2.5rem; }
+  @media screen and (min-width: 736px) {
+    .page-header h1 {
+      font-size: 3rem; } }
   .page-header h1 small {
     display: inline-block;
     margin-left: 1rem;
@@ -512,7 +528,10 @@ input, select {
   margin: 0;
   padding: 0;
   padding-bottom: 2rem;
-  columns: 4; }
+  columns: 2; }
+  @media screen and (min-width: 736px) {
+    .filter-options {
+      columns: 4; } }
   .filter-options li {
     margin-bottom: .5rem; }
   .filter-options a {
@@ -560,42 +579,84 @@ input, select {
   margin-left: -2rem; }
 
 .product-preview {
-  display: flex;
-  width: calc(33.333% - 2rem);
+  width: calc(50% - 2rem);
   margin-left: 2rem;
   margin-bottom: 4rem; }
+  @media screen and (min-width: 736px) {
+    .product-preview {
+      display: flex;
+      width: calc(33.333% - 2rem); } }
 
 .product-image {
-  width: calc(45% - 1rem);
-  margin: 0 1rem 0 0; }
+  width: 80%;
+  margin: 0 auto; }
+  @media screen and (min-width: 736px) {
+    .product-image {
+      width: calc(45% - 1rem);
+      margin: 0 1rem 0 0; } }
   .product-image img {
     max-width: 100%;
     height: auto; }
 
-.product-information {
-  width: 55%; }
-  .product-information h3 {
-    font-size: 1.125rem; }
-  .product-information .product-price {
-    margin-bottom: .25rem;
-    font-size: .875rem; }
-  .product-information .product-description {
-    margin-bottom: .25rem; }
-  .product-information .button {
-    margin-top: 1.5rem; }
+@media screen and (min-width: 736px) {
+  .product-information {
+    width: 55%; } }
 
-.product-details {
-  margin-bottom: 4rem; }
-  .product-details .container {
-    padding-top: 0; }
-  .product-details .product-image {
-    order: 2;
-    width: calc(60% - 8rem);
-    margin-left: 8rem;
-    margin-right: 0; }
+.product-information h3 {
+  font-size: 1.125rem; }
+
+.product-information .product-price {
+  margin-bottom: .25rem;
+  font-size: .875rem; }
+
+.product-information .product-description {
+  margin-bottom: .25rem; }
+
+.product-information .button {
+  margin-top: 1.5rem; }
+
+@media screen and (min-width: 736px) {
+  .product-details {
+    margin-bottom: 4rem; } }
+
+.product-details .container {
+  padding-top: 0; }
+
+.product-details .product-image {
+  width: 80%;
+  margin: 2rem auto 1rem;
+  text-align: center; }
+  .product-details .product-image img {
+    max-width: 100%;
+    height: auto; }
+
+@media screen and (min-width: 736px) {
   .product-details .product-information {
-    order: 1;
-    width: 40%; }
+    width: calc(60% - 4rem);
+    margin-right: 4rem; } }
+
+@media screen and (min-width: 736px) {
+  .product-details .product-information.denture-teeth {
+    width: calc(50% - 4rem); } }
+
+.product-details .product-selection {
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid #eee; }
+  @media screen and (min-width: 736px) {
+    .product-details .product-selection {
+      width: 40%;
+      padding: 2rem;
+      border-top: 0;
+      border-left: 1px solid #eee; } }
+  @media screen and (min-width: 1020px) {
+    .product-details .product-selection.denture-teeth {
+      width: 40%;
+      padding-right: 0; } }
+  .product-details .product-selection.denture-teeth h2 {
+    margin-top: 0;
+    font-weight: 400;
+    font-size: 1rem; }
 
 .product-collection-label {
   display: block;
