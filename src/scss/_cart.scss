@@ -14,7 +14,7 @@
   }
 
   .product-image{
-    width: 60%;
+    width: 40%;
     text-align: center;
 
     @media screen and (#{$bp-larger-than-tablet}){
@@ -23,7 +23,7 @@
   }
 
   .product-information{
-    width: 40%;
+    width: 60%;
 
     @media screen and (#{$bp-larger-than-tablet}){
       display: flex;
@@ -50,6 +50,7 @@
     }
 
     input{
+      margin: 0 .5rem;
       padding: .5rem;
       text-align: center;
       border: 1px solid $border-color;

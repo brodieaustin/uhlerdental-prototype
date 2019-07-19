@@ -869,13 +869,13 @@ input, select {
   .cart-item:first-child {
     border-top: 1px solid #d3d5d5; }
   .cart-item .product-image {
-    width: 60%;
+    width: 40%;
     text-align: center; }
     @media screen and (min-width: 736px) {
       .cart-item .product-image {
         width: calc(20% - 2rem); } }
   .cart-item .product-information {
-    width: 40%; }
+    width: 60%; }
     @media screen and (min-width: 736px) {
       .cart-item .product-information {
         display: flex;
@@ -893,6 +893,7 @@ input, select {
         .cart-item .product-information h3 {
           width: 40%; } }
     .cart-item .product-information input {
+      margin: 0 .5rem;
       padding: .5rem;
       text-align: center;
       border: 1px solid #d3d5d5; }
