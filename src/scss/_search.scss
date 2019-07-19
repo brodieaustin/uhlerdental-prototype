@@ -1,18 +1,28 @@
 .search-results-section{
   .product-previews{
     display: block;
+    margin-left: 0;
   }
 
   .product-preview{
     width: 100%;
+    margin-left: 0;
     padding-bottom: 2rem;
     border-bottom: 1px solid $border-color;
   }
 
   .product-image{
-    width: calc(30% - 2rem);
+    width: 80%;
+    text-align: center;
+
+    @media screen and (#{$bp-larger-than-tablet}){
+      width: calc(30% - 2rem);
+    }
   }
   .product-information{
-    width: 70%;
+
+    @media screen and (#{$bp-larger-than-tablet}){
+        width: 60%;
+    }
   }
 }

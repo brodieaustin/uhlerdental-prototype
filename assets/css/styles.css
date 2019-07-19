@@ -919,18 +919,25 @@ input, select {
   font-weight: 700; }
 
 .search-results-section .product-previews {
-  display: block; }
+  display: block;
+  margin-left: 0; }
 
 .search-results-section .product-preview {
   width: 100%;
+  margin-left: 0;
   padding-bottom: 2rem;
   border-bottom: 1px solid #d3d5d5; }
 
 .search-results-section .product-image {
-  width: calc(30% - 2rem); }
+  width: 80%;
+  text-align: center; }
+  @media screen and (min-width: 736px) {
+    .search-results-section .product-image {
+      width: calc(30% - 2rem); } }
 
-.search-results-section .product-information {
-  width: 70%; }
+@media screen and (min-width: 736px) {
+  .search-results-section .product-information {
+    width: 60%; } }
 
 .user-content {
   clear: both;
