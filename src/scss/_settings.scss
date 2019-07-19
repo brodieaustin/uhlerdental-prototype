@@ -1,6 +1,7 @@
 //colors
 $white: #fff;
 $black: #333;
+$red: #C64A2D;
 $light-grey: #EDEEEE;
 $medium-grey: #D8D8D8;
 $primary-color: #192D40;
@@ -9,9 +10,10 @@ $tertiary-color: #D1F1F3;
 
 //named colors
 $background-color: $white;
-$border-color: $light-grey;
+$border-color: darken($light-grey, 10%);
 $link-color: $secondary-color;
 $font-color: $primary-color;
+$alert-color: $red;
 
 //fonts
 $primary-font-family: 'Roboto', sans-serif;

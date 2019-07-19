@@ -7,23 +7,43 @@
 }
 
 .account-info{
-  width: calc(35% - 2rem);
-  margin-right: 2rem;
+  margin-bottom: 2rem;
+
+  @media screen and (#{$bp-larger-than-tablet}){
+    width: calc(35% - 2rem);
+    margin-right: 2rem;
+    margin-bottom: 0;
+  }
 }
 
 .account-orders{
-  width: 65%;
+
+  @media screen and (#{$bp-larger-than-tablet}){
+      width: 65%;
+  }
 }
 
 
 .account-address{
   @include unstyled-list;
   margin-bottom: 1rem;
+
+  li{
+    margin-bottom: .25rem;
+  }
 }
 
 .account-form-section{
   .container{
-    max-width: 40%;
+    max-width: 30rem;
+
+    @media screen and (#{$bp-larger-than-tablet}){
+      width: 60%;
+    }
+
+    @media screen and (#{$bp-larger-than-desktop}){
+      width: 40%;
+    }
   }
 
   h1{

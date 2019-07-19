@@ -1,25 +1,62 @@
 .order-previews{
   @include unstyled-list;
-  display: table;
-  width: 100%;
+
+  @media screen and (#{$bp-larger-than-tablet}){
+    display: table;
+    width: 100%;
+  }
 }
 
 .order-preview{
-  display: table-row;
+  padding: 1rem 0;
+  border-bottom: 1px solid $border-color;
+
+  @media screen and (#{$bp-larger-than-tablet}){
+    display: table-row;
+    border-bottom: 0;
+  }
 
   div{
-    display: table-cell;
-    padding: 1rem .5rem .5rem;
-    border-bottom: 1px solid $border-color;
+    display: inline-block;
+    padding: 0 .5rem;
+
+    &:first-child{
+      display: block;
+    }
+
+    @media screen and (#{$bp-larger-than-tablet}){
+      display: table-cell;
+      padding: 1rem .5rem;
+      border-bottom: 1px solid $border-color;
+
+      &:first-child{
+        display: table-cell;
+      }
+    }
   }
 }
 
 .order-preview-headings{
+  display: none;
   text-transform: uppercase;
   font-size: .75rem;
 
+  @media screen and (#{$bp-larger-than-tablet}){
+    display: table-row;
+  }
+
   div{
     padding-top: 0;
+  }
+}
+
+.order-preview-order-number{
+  font-size: 1.25rem;
+  font-weight: 500;
+
+  @media screen and (#{$bp-larger-than-tablet}){
+    font-size: 1rem;
+    font-weight: 400;
   }
 }
 
@@ -43,13 +80,21 @@
 
 .order-details{
   @include unstyled-list;
-  display: table;
-  width: 100%;
+
+  @media screen and (#{$bp-larger-than-tablet}){
+    display: table;
+    width: 100%;
+  }
 }
 
 .order-detail-headings{
+  display: none;
   text-transform: uppercase;
   font-size: .75rem;
+
+  @media screen and (#{$bp-larger-than-tablet}){
+    display: table-row;
+  }
 
   span{
     padding-top: 0;
@@ -57,18 +102,46 @@
 }
 
 .order-detail{
-  display: table-row;
+  margin-bottom: .5rem;
+  padding-bottom: .5rem;
+  border-bottom: 1px solid $border-color;
+
+
+  @media screen and (#{$bp-larger-than-tablet}){
+    display: table-row;
+    border-bottom: 0;
+  }
 
   div{
-    display: table-cell;
-    width: 15%;
-    padding: 1rem .5rem .5rem;
-    border-bottom: 1px solid $border-color;
+    display: inline-block;
+    padding: .25rem;
+
+    @media screen and (#{$bp-larger-than-tablet}){
+      display: table-cell;
+      width: 15%;
+      padding: 1rem .5rem .5rem;
+      border-bottom: 1px solid $border-color;
+    }
+  }
+
+  .order-detail-product{
+    display: block;
+    width: 40% !important;
+
+    @media screen and (#{$bp-larger-than-tablet}){
+      display: table-cell;
+    }
   }
 }
 
-.order-detail-product{
-  width: 40% !important;
+.order-meta{
+  .colspan{
+    display: none;
+
+    @media screen and (#{$bp-larger-than-tablet}){
+      display: table-cell;
+    }
+  }
 }
 
 .order-detail-label{

@@ -53,3 +53,20 @@ input, select{
     columns: 4;
   }
 }
+
+.errors{
+  ul{
+    @include unstyled-list;
+
+    li{
+      margin-bottom: 1rem;
+      padding: .5rem;
+      background-color: $alert-color;
+      color: $white;
+    }
+  }
+}
+
+.input-error{
+  border-color: $alert-color;
+}

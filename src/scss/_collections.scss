@@ -4,11 +4,12 @@
 
 .collection-preview{
   margin-bottom: 2rem;
-  padding: 2rem 0;
+  padding: 1rem 2rem 2rem;
   border-bottom: 1px solid $border-color;
 
   @media screen and (#{$bp-larger-than-tablet}){
     display: flex;
+    padding: 2rem;
   }
 
   &:last-child{

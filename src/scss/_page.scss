@@ -16,9 +16,13 @@
     }
 
     small{
-      display: inline-block;
-      margin-left: 1rem;
+      display: block;
       color: $secondary-color;
+
+      @media screen and (#{$bp-larger-than-tablet}){
+        display: inline-block;
+        margin-left: 1rem;
+      }
     }
   }
 }

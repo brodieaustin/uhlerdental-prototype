@@ -20,20 +20,18 @@
   }
 }
 
-.site-nav-container{
+.site-nav{
   position: fixed;
   top: 0;
   left: 0;
+  display: inline-block;
   width: 70%;
   height: 100%;
-  padding: 8rem 4rem;
+  padding: 8rem 2rem;
   background-color: $light-grey;
+  text-align: center;
   transform: translateX(-100%);
   z-index: 10000;
-
-  @media screen and (#{$bp-larger-than-tablet}){
-    width: 40%;
-  }
 
   @media screen and (#{$bp-larger-than-desktop}){
     position: relative;
@@ -56,11 +54,6 @@
     transform: translateX(0);
     transition: transform .3s ease-out;
   }
-}
-
-.site-nav{
-  display: inline-block;
-  text-align: center;
 
   li{
     display: block;
@@ -83,9 +76,14 @@
 
 .secondary-nav{
   position: absolute;
-  top: 3rem;
-  right: 2rem;
+  top: 50%;
+  right: .5rem;
   display: inline-block;
+
+  @media screen and (#{$bp-larger-than-desktop}){
+    top: 3.5rem;
+    right: 2rem;
+  }
 
   a{
     cursor: pointer;
@@ -93,6 +91,42 @@
     svg{
       width: 1.5rem;
       height: auto;
+    }
+  }
+}
+
+
+.contact-info{
+  @include unstyled-list;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+  padding: .5rem;
+  background-color: $tertiary-color;
+  text-align: center;
+
+  @media screen and (#{$bp-larger-than-desktop}){
+    top: .5rem;
+    right: 2rem;
+    padding: 0;
+    text-align: right;
+    background-color: transparent;
+  }
+
+  li{
+
+    display: inline-block;
+
+    a{
+      font-size: .8215rem;
+      letter-spacing: .5px;
+      color: $primary-color;
+    }
+
+    &:first-child:after{
+      content: " | "
     }
   }
 }

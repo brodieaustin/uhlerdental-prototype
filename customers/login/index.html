@@ -7,9 +7,10 @@ layout: base
   <div class="container">
     <h1>Login</h1>
     <form class="account-form">
+      <div class="errors"><ul><li>Invalid login credentials.</li></ul></div>
       <div class="form-control">
         <label for="customer_email">Email Address</label>
-        <input type="email" name="name="customer[email]">
+        <input type="email" name="name="customer[email]" class="input-error">
       </div>
       <div class="form-control">
         <label for="customer_password">Password</label>
